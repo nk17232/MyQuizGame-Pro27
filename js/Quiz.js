@@ -43,30 +43,25 @@ class Quiz {
     //write condition to check if contestantInfor is not undefined
     if(allContestants !== undefined){
       for(var plr in allContestants){
-        if( plr === "contestant" + contestant.index)
+        var correctAns = "2";
+        if("contestant" === allContestants[plr].answer)
         fill("green");
-        else
+        else 
         fill("red");
-        
-        var display_position =130;
+  
+        var display_position =150;
         display_position+=20;
         textSize(15);
         text(allContestants[plr].name + ":" + allContestants[plr].answer,300, display_position)
-      }
+    }
       
     }
     //write code to add a note here
       fill("blue");
       textSize(20);
-      text("*NOTE: Contestant who answered correct are highlighted in green color!", 130, 230);
+      text("*NOTE: Contestant who answered correct are highlighted in green color!", 130, 300);
     //write code to highlight contest who answered correctly
-   for(var plr in allContestants){
-      var correctAns = "2";
-      if("contestant" === allContestants[plr].answer)
-      fill("red")
-      else 
-      fill("green");
-  }
+  
    
   }
 
